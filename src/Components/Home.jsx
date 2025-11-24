@@ -14,8 +14,7 @@ const Home = () => {
              </header>
 
               <About></About>
-            <h2 className='text-7xl mt-12 bg-[#F7F6F5]'>suna mia</h2>
-            <h2 className='text-7xl mt-12 bg-[#f9f9f8]'>suna mia</h2>
+           
 
 
         </div>

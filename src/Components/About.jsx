@@ -22,8 +22,8 @@ const About = () => {
           className="flex justify-center"
         >
           <div className="relative">
-            <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-30"></div>
-           <div className="relative  object-cover rounded-2xl shadow-2xl border-4 border-white">
+            <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-100 via-purple-200 to-pink-200 rounded-2xl blur opacity-30"></div>
+           <div className="relative  object-cover rounded-2xl shadow-accent ">
             <Lottie animationData={animate} loop={true}></Lottie>
            </div>
           </div>
