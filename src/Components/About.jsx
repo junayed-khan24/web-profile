@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import animate from '../../src/assets/Developer.json'
+import animate from '../../src/assets/Developer (1).json'
 import Lottie from "lottie-react";
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center py-20 px-6">
+    <section className="min-h-screen bg-black flex items-center justify-center py-20 px-6">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ const About = () => {
           className="flex justify-center"
         >
           <div className="relative">
-            <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-100 via-purple-200 to-pink-200 rounded-2xl blur opacity-30"></div>
+            <div className="absolute -inset-2  rounded-2xl blur opacity-30"></div>
            <div className="relative  object-cover rounded-2xl shadow-accent ">
             <Lottie animationData={animate} loop={true}></Lottie>
            </div>
@@ -36,13 +36,13 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-pink-500">Me</span>
+          <h2 className="text-5xl font-extrabold text-gray-600 mb-4 leading-tight">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-rose-600">Me</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            I'm <span className="font-semibold text-gray-800">Junayed</span>, a passionate{" "}
-            <span className="text-indigo-600 font-semibold">Full Stack Developer</span> 
-            dedicated to crafting elegant and high-performing digital experiences.
+            I'm <span className="font-semibold text-gray-600">Junayed</span>, a passionate{" "}
+            <span className="text-rose-600 font-semibold">Full Stack Developer</span> 
+              dedicated to crafting elegant and high-performing digital experiences.
           </p>
           <p className="text-gray-600 leading-relaxed mb-8">
             My goal is to build solutions that are not just functional but delightful.
@@ -68,7 +68,7 @@ const About = () => {
                     whileInView={{ width: `${skill.level}%` }}
                     transition={{ duration: 1.2, delay: i * 0.2 }}
                     viewport={{ once: true }}
-                    className="h-2.5 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full"
+                    className="h-2.5 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full"
                   ></motion.div>
                 </div>
               </div>
@@ -80,14 +80,14 @@ const About = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               href="#projects"
-              className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all"
+              className="px-6 py-3 bg-gradient-to-r from-rose-700 to-rose-500 text-white rounded-lg shadow-md hover:shadow-lg transition-all"
             >
               View My Work
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
               href="#contact"
-              className="px-6 py-3 border border-indigo-500 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-all"
+              className="px-6 py-3 border border-rose-500 text-rose-600 rounded-lg hover:bg-indigo-50 transition-all"
             >
               Contact Me
             </motion.a>

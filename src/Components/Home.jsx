@@ -8,7 +8,7 @@ const Home = () => {
         <div className=''>
              <header className='mt-0'>
                 <Navbar></Navbar>
-                <div className='mt-6 '>
+                <div className=' '>
                    <Hero></Hero>
                 </div>
              </header>
