@@ -97,7 +97,7 @@ const Hero = () => {
           ">
             <img
               src={img}
-              alt="hero-img"
+              alt="Junayed Khan  Wev develper"
               className="rounded-2xl object-cover w-full h-full"
             />
           </div>
