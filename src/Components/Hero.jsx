@@ -50,11 +50,11 @@ const Hero = () => {
 
       {/* LEFT SIDE */}
       <div className="order-2 md:order-1 text-center md:text-left">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-300 mb-4">
+        <h1 className="text-3xl  sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-300 mb-4">
           I'm <span className="text-rose-500">Junayed Khan</span>
         </h1>
 
-        <div className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-6">
+        <div className="text-xl text-left ml-[74px] md:ml-0 sm:text-2xl lg:text-3xl text-gray-400 mb-6">
           <span>{displayText}&nbsp;</span>
         </div>
 
