@@ -1,10 +1,15 @@
 import React from "react";
 import PortfolioCard from "./PortfolioCard";
+import Pets from '../../src/assets/Cat.JPG';
+import Bangladesh from '../../src/assets/Capture.JPG';
+import Tea from '../../src/assets/tee.JPG';
+import Kids from '../../src/assets/kids.JPG'; 
+import DevBoard from '../../src/assets/5ef32588ca14e2124d041f32a4e978c2.jpg';
 
 const PortfolioSection = () => {
   const portfolioData = [
   {
-    image: "../../src/assets/Cat.JPG",
+    image: Pets,
     title: "Creative Design & Services for Pet Shop",
     category: "Pets Shop",
     views: 501,
@@ -14,7 +19,7 @@ const PortfolioSection = () => {
     ],
   },
   {
-    image: "../../src/assets/Capture.JPG",
+    image: Bangladesh,
     title: "Modern Web Design for Bangladesh 2.0",
     category: "Bangladesh 2.0",
     views: 780,
@@ -24,7 +29,7 @@ const PortfolioSection = () => {
     ],
   },
   {
-    image: "../../src/assets/tee.JPG",
+    image:  Tea,
     title: "Creative UI & Branding for Tea House",
     category: "Tea House",
     views: 320,
@@ -34,7 +39,7 @@ const PortfolioSection = () => {
     ],
   },
   {
-    image: "../../src/assets/kids.JPG",
+    image: Kids,
     title: "Educational Website Design for Kids School",
     category: "Kids School",
     views: 265,
@@ -44,7 +49,7 @@ const PortfolioSection = () => {
     ],
   },
   {
-    image: "../../src/assets/5ef32588ca14e2124d041f32a4e978c2.jpg",
+    image: DevBoard,
     title: "Technology Focused UI & Services Platform",
     category: "DevBoard",
     views: 380,
@@ -54,7 +59,7 @@ const PortfolioSection = () => {
     ],
   },
   {
-    image: "../../src/assets/5ef32588ca14e2124d041f32a4e978c2.jpg",
+    image: DevBoard,
     title: "Application Design & Development for DevBoard",
     category: "DevBoard",
     views: 450,
