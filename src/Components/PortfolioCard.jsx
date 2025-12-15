@@ -8,11 +8,13 @@ const PortfolioCard = ({ image, title, category, views, links }) => {
         relative card 
         bg-[#1d1f25]
         shadow-xl
-        rounded-3xl
+        rounded-xl
         p-[4px]
         border-2 border-transparent
-        hover:border-rose-500
+        hover:border-rose-300
         transition-all duration-500
+        hover:shadow-rose-300/20
+        hover:translate-t-2
       "
     >
       <div className="relative bg-[#1d1f25] rounded-2xl p-5">
@@ -36,11 +38,11 @@ const PortfolioCard = ({ image, title, category, views, links }) => {
             {category}
           </p>
 
-          <h2 className="text-xl font-extrabold mt-2 text-white leading-snug">
+          <h2 className="text-xl font-extrabold mt-2 text-white/80 leading-snug">
             {title}
           </h2>
 
-          <div className="flex justify-between items-center mt-4">
+          <div className="flex justify-between items-center mt-8">
             <p className="text-gray-300 text-sm font-semibold flex items-center gap-2">
               <span className="text-lg">👁</span> {views}
             </p>
