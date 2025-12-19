@@ -7,7 +7,7 @@ const Hero = () => {
   const texts = [
     "Full Stack Developer.",
     "Front-End Developer.",
-    "Mern Stack Developer.",
+    "Mern Stack Developer",
     "React Developer",
   ];
   const [textIndex, setTextIndex] = useState(0);
