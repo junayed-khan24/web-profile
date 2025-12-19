@@ -55,7 +55,7 @@ const Hero = () => {
               I'm Junayed Khan
             </h1>
 
-            <div className="text-left ml-12 text-3xl  sm:text-4xl lg:text-5xl xl:text-5xl text-rose-500 mb-12 font-bold h-10">
+            <div className="text-left ml-10 text-3xl  sm:text-4xl lg:text-5xl xl:text-5xl text-rose-500 mb-12 font-bold h-10">
               <span>A {displayText}&nbsp;</span>
             </div>
 
