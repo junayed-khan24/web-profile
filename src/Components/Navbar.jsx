@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { FaCode } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const Navbar = () => { 
   const [open, setOpen] = useState(false);
@@ -18,10 +19,12 @@ const Navbar = () => {
   return (
     <nav className='flex justify-between items-center md:px-24 px-6 bg-cyan-400/10 backdrop-blur-md py-4 fixed w-full top-0 z-50 shadow-lg'>
       {/* Logo */}
+      <Link to="/">
       <div className='flex items-center gap-2'> 
         <FaCode size={28} className='text-cyan-400' />
         <h3 className='md:text-2xl text-xl font-bold text-cyan-400'> Junayed Khan</h3>
       </div>
+      </Link>
 
       <div className='relative'>
         {/* Desktop Links */}

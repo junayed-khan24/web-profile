@@ -64,7 +64,7 @@ const Hero = () => {
 
           {/* LEFT SIDE */}
           <div className="order-2 md:order-1 text-center md:text-left">
-            <h3 className="text-xl text-cyan-400 mb-2 text">Welcome to my world</h3>
+            <h3 className="md:text-xl text-sm text-cyan-400 mb-2 text">Welcome to my world</h3>
             <h1 className="text-3xl  sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
               I'm Junayed Khan
             </h1>
@@ -109,7 +109,8 @@ const Hero = () => {
             sm:w-76 sm:h-76
             md:w-80 md:h-80
             lg:w-106 lg:h-106
-            mx-auto border-8 border-cyan-500/20 rounded-2xl
+            mx-auto border-8 border-cyan-500/20 
+            hover:border-cyan-500/50 rounded-2xl
             flex items-center justify-center shadow-xl overflow-hidden
           ">
                 <img
