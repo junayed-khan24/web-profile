@@ -30,6 +30,8 @@ const PortfolioCard = ({ image, title, category, views, links }) => {
               scale-100
               hover:scale-125
               transition-transform duration-500 ease-out
+              brightness-60
+              hover:brightness-100
             "
           />
         </figure>
@@ -41,7 +43,7 @@ const PortfolioCard = ({ image, title, category, views, links }) => {
           </p>
 
           {/* Title */}
-          <h2 className="text-xl font-extrabold mt-2 text-gray-300 leading-snug">
+          <h2 className="text-1xl font-extrabold mt-2 text-gray-300 leading-snug">
             {title}
           </h2>
 

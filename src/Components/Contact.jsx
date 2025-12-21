@@ -27,15 +27,15 @@ const Contact = () => {
             <div className="space-y-4 text-gray-300 text-sm">
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-cyan-400" />
-                <span>nafiz125@gmail.com</span>
+                <span>junayedkhan@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt className="text-cyan-400" />
-                <span>3891 Ranchview Dr. Richardson</span>
+                <span>Mymensingh Bangladesh</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-cyan-400" />
-                <span>01245789321</span>
+                <span>01770-718121</span>
               </div>
             </div>
           </div>
