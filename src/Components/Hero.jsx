@@ -5,44 +5,56 @@ import SocialMedia from "./SocialMedia";
 
 const Hero = () => {
   const texts = [
-    "Full Stack Developer.",
+    "Full Stack Developer.|",
     "Front-End Developer.",
-    "Mern Stack Developer.",
-    "React Developer",
+    "MERN Stack Developer.",
+    "React Developer.",
   ];
+
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [displayText, setDisplayText] = useState("");
 
-  useEffect(() => {
-    let typeSpeed = isDeleting ? 100 : 300;
+  // 👉 1 second-এ পুরো text complete করার জন্য speed
+  const TYPING_DURATION = 1000; // ms
 
-    if (!isDeleting && charIndex === texts[textIndex].length) {
-      typeSpeed = 1000;
-      setIsDeleting(true);
+  useEffect(() => {
+    const currentText = texts[textIndex];
+    const totalChars = currentText.length;
+
+    // প্রতি character-এর delay
+    const charSpeed = TYPING_DURATION / totalChars;
+
+    let timeout;
+
+    if (!isDeleting && charIndex < totalChars) {
+      // Typing
+      timeout = setTimeout(() => {
+        setDisplayText(currentText.slice(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      }, charSpeed);
+    } else if (!isDeleting && charIndex === totalChars) {
+      // Full text typed → pause → delete
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 1000);
+    } else if (isDeleting && charIndex > 0) {
+      // Deleting
+      timeout = setTimeout(() => {
+        setDisplayText(currentText.slice(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      }, charSpeed / 2); // delete faster
     } else if (isDeleting && charIndex === 0) {
+      // Next text
       setIsDeleting(false);
       setTextIndex((prev) => (prev + 1) % texts.length);
-      typeSpeed = 500;
     }
 
-    const timeout = setTimeout(() => {
-      const currentText = texts[textIndex];
-      if (isDeleting) {
-        setDisplayText(currentText.substring(0, charIndex - 1));
-        setCharIndex((prev) => prev - 1);
-      } else {
-        setDisplayText(currentText.substring(0, charIndex + 1));
-        setCharIndex((prev) => prev + 1);
-      }
-    }, typeSpeed);
-
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, textIndex, texts]);
-
+  }, [charIndex, isDeleting, textIndex]);
   return (
-    <section id="home" className="min-h-screen bg-[#0f1115] pt-10 mt-6 md:pt-16">
+    <section id="home" className="min-h-screen bg-[#050B14] pt-10 mt-6 md:pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {/* GRID — md responsive now fixed */}
@@ -50,13 +62,13 @@ const Hero = () => {
 
           {/* LEFT SIDE */}
           <div className="order-2 md:order-1 text-center md:text-left">
-             <h3 className="text-xl text-gray-400 mb-2 text">Welcome to my world</h3>
-            <h1 className="text-3xl  sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-300 mb-4">
+            <h3 className="text-xl text-cyan-400 mb-2 text">Welcome to my world</h3>
+            <h1 className="text-3xl  sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4">
               I'm Junayed Khan
             </h1>
 
-            <div className="text-left ml-8 text-3xl  sm:text-4xl lg:text-5xl xl:text-5xl text-rose-500 mb-12 font-bold h-10">
-              <span>A {displayText}&nbsp;</span>
+            <div className=" text-3xl  sm:text-4xl lg:text-5xl xl:text-5xl  bg-gradient-to-r from-cyan-600 via-cyan-400 to-cyan-300 bg-clip-text text-transparent mb-12 font-bold ">
+              <span> <span className="text-white">A</span> {displayText}&nbsp;</span>
             </div>
 
             <p className="text-base sm:text-lg text-gray-500 mb-6 leading-relaxed">
@@ -67,7 +79,7 @@ const Hero = () => {
             <div className="mb-2 flex justify-center md:justify-start">
               <SocialMedia />
             </div>
-{/* 
+            {/* 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="#portfolio"

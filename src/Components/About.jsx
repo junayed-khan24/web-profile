@@ -6,7 +6,7 @@ import MySkill from "./MySkill";
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-[#0f1115] flex items-center justify-center md:-mt-24 px-4 md:px-8">
+    <section className="min-h-screen bg-[#050B14] flex items-center justify-center md:-mt-24 px-4 md:px-8">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
