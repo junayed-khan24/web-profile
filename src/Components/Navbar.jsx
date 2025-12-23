@@ -49,7 +49,7 @@ const Navbar = () => {
           } transition-transform duration-300 ease-in-out md:hidden z-40`}
         >
           <div className='flex justify-between items-center p-4 border-b border-cyan-900'>
-            <h2 className='text-lg font-semibold text-white'>Menu</h2>
+            <h2 className='text-lg font-semibold text-white '>Menu</h2>
             <button onClick={() => setOpen(false)} className='text-white'>
               <X size={22} />
             </button>
