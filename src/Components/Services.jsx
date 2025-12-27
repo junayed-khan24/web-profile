@@ -21,7 +21,7 @@ const services = [
     icon: <FaWordpress />,
     features: [
       "Easy Content Management",
-      "eCommerce Functionality",
+      "eCommerce F",
       "Mobile Friendly",
       "SEO Ready",
       "Fast Setup",

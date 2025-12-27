@@ -4,7 +4,7 @@ const PortfolioCard = ({ image, title, category, views, links }) => {
   return (
     <div
       className="
-        max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6
+        max-w-7xl mx-auto px-4 sm:px-6 py-4
         group rounded-2xl overflow-hidden
         bg-gradient-to-br from-[#071726] to-[#030814]
         border border-cyan-400/10
